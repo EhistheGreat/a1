@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.urls import path
 
 from django.http import JsonResponse
-from django.views import view
+from django.views import View
 
-class About(view):
+class About(View):
     def get(self,request,*args,**kwargs):
         data = {'gender':'male','github_url':'https://github.com/','name':'ehisthegreat'}
         return JsonResponse(data)
